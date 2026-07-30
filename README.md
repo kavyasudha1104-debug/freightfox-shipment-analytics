@@ -2,7 +2,7 @@
 
 This project analyzes a shipment dataset containing 5,015 records to evaluate delivery performance, freight pricing, customer delays, and the data-quality issues that affect business conclusions.
 
-**Live dashboard:** <PASTE STREAMLIT CLOUD URL HERE>
+**Live dashboard:** <https://freightfox-shipment-analytics-bqnjl8y22czwhtwtmqkcgr.streamlit.app/>
 
 ## Repo contents
 
