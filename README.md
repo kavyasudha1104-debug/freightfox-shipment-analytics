@@ -1,4 +1,4 @@
-# FreightFox — Shipment Analytics Take-Home
+# Shipment Analytics 
 
 This project analyzes a shipment dataset containing 5,015 records to evaluate delivery performance, freight pricing, customer delays, and the data-quality issues that affect business conclusions.
 
