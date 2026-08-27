@@ -44,4 +44,4 @@ Requires Python 3.10+.
 
 ## Tools used
 
-Python (pandas, scipy, plotly), Streamlit, and Claude and chatgpt as an AI pair-analyst for exploration, drafting, and code generation. 
+Python (pandas, scipy, plotly), Streamlit, and I used AI tools (Claude, ChatGPT) selectively during development — for debugging and speeding up boilerplate code — while the analytical decisions, statistical approach, and interpretation were my own. 
