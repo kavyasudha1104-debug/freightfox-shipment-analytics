@@ -18,7 +18,7 @@ This project analyzes a shipment dataset containing 5,015 records to evaluate de
 
 ```bash
 git clone <this-repo>
-cd freightfox-shipment-analytics
+cd shipment-delivery-analytics
 pip install -r requirements.txt
 
 python analysis.py       # reproduce every quoted number in the terminal
