@@ -3,9 +3,9 @@
 
 A shipment was considered on time if the `actual_delivery_date` was on or before the `promised_delivery_date`. After removing 15 duplicate rows, the analysis was performed on the remaining valid shipment records. All numbers below are reproducible by running `analysis.py`.
 
-## 1. Which region has the worst on-time delivery performance — and what's actually driving it?
+## 1. Which region has the worst on-time delivery performance - and what's actually driving it?
 
-I started by looking at on-time rates region by region. Central came out lowest on the surface, at 48.3% — but I didn't want to stop there, because a single number without a significance check can be misleading.
+I started by looking at on-time rates region by region. Central came out lowest on the surface, at 48.3% - but I didn't want to stop there, because a single number without a significance check can be misleading.
 
 Running a chi-square test showed the regional differences weren't statistically significant, meaning they could easily be due to random variation rather than a real regional problem.
 
@@ -35,9 +35,9 @@ CARR_07's median freight cost was ₹125.6 per km, compared to ₹12.9 per km fo
 - Compared freight cost per kilometer across carriers
 - Verified the deviation wasn't explained by transport mode
 
-## 3. Which customers are experiencing the most delivery delays — and is it carrier-driven, region-driven, or something else?
+## 3. Which customers are experiencing the most delivery delays - and is it carrier-driven, region-driven, or something else?
 
-A few customers — CUST_026, CUST_050, CUST_116, and CUST_063 — stood out with late-delivery rates around 70%, well above the company-wide baseline of 50%.
+A few customers — CUST_026, CUST_050, CUST_116, and CUST_063 - stood out with late-delivery rates around 70%, well above the company-wide baseline of 50%.
 
 My instinct was to check whether this pointed to a specific carrier or region problem before calling them "problem customers." After testing, I found their higher delay rates were mostly explained by shorter promised delivery windows and small sample sizes — not by a distinct regional or carrier pattern.
 
@@ -54,7 +54,7 @@ The one consistent operational issue that held up was CARR_02 again, performing 
 Before drawing any business conclusions, I audited the dataset itself:
 
 - Removed 15 duplicate shipment records
-- Found 682 completed shipments missing actual delivery dates — 84.5% of them concentrated in the South region
+- Found 682 completed shipments missing actual delivery dates - 84.5% of them concentrated in the South region
 - Removed 72 records with impossible date sequences (delivery logged before pickup)
 - Chose not to rely on the `status` column for performance analysis, since it frequently disagreed with the actual shipment dates
 - Identified CARR_07 as a clear pricing outlier
@@ -62,11 +62,11 @@ Before drawing any business conclusions, I audited the dataset itself:
 
 Rather than deleting large chunks of the dataset, I handled each issue only where it actually affected a specific analysis, and flagged the relevant limitation wherever it came up in the findings above.
 
-## 5. If I could track exactly one metric weekly to catch delivery problems early, what would it be — and why?
+## 5. If I could track exactly one metric weekly to catch delivery problems early, what would it be - and why?
 
 I'd track the percentage of in-transit shipments that are already close to or past their promised delivery date.
 
-This is a leading indicator — it flags delivery problems before customers are actually affected, rather than after the fact. It also surfaces unrealistic delivery promises and underperforming carriers early enough for an operations team to intervene before delays turn into customer complaints.
+This is a leading indicator - it flags delivery problems before customers are actually affected, rather than after the fact. It also surfaces unrealistic delivery promises and underperforming carriers early enough for an operations team to intervene before delays turn into customer complaints.
 
 ## What I'd flag if this were a live production dataset
 
