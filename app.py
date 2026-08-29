@@ -4,7 +4,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
-st.set_page_config(page_title="FreightFox Shipment Analytics", layout="wide")
+st.set_page_config(page_title="shipment-delivery-analytics", layout="wide")
 
 DATA_PATH = "shipments.csv"
 
@@ -37,7 +37,7 @@ def load_data():
 
 df, m, n_dupes = load_data()
 
-st.title("FreightFox — Shipment Delivery Performance")
+st.title("shipment-delivery-analytics")
 st.caption(
     f"5,015 raw rows → {n_dupes} exact duplicates removed → {len(df):,} shipments. "
     f"On-time performance is measurable for {len(m):,} of them "
